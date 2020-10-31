@@ -1,0 +1,23 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.Linq;
+using System.Threading.Tasks;
+
+namespace joolochu.Model
+{
+    /// <summary>
+    /// Точки
+    /// </summary>
+    public class Point
+    {
+        [Key]
+        public int Id { get; set; }
+        public int? VillageId { get; set; }
+        public Village Village { get; set; }
+        public int? DistrictId { get; set; }
+        public District District { get; set; }
+        public int? CityId { get; set; }
+        public City City { get; set; }
+    }
+}
