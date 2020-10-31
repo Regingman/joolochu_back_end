@@ -104,7 +104,7 @@ namespace joolochu.Controllers
         [HttpGet("{start}/{end}")]
         public async Task<ActionResult<Order>> FindOrder(int start, int end)
         {
-            var order = await _context.Orders.FirstOrDefaultAsync(e => e.StartPointId == start && e.EndPointId == end) ?? null;
+            var order = await _context.Orders.Where(e => e.StartPointId == start && e.EndPointId == end).ToListAsync() ?? null;
             if (order == null)
             {
                 return NotFound();
