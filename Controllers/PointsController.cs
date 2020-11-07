@@ -25,8 +25,6 @@ namespace joolochu.Controllers
         public async Task<ActionResult<IEnumerable<Point>>> GetPoints()
         {
             return await _context.Points
-                .Include(p => p.District)
-                .Include(p => p.Village)
                 .ToListAsync();
         }
 

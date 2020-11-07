@@ -1,5 +1,6 @@
 using joolochu.Model;
 using Microsoft.EntityFrameworkCore;
+using SQLitePCL;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -2031,6 +2032,22 @@ namespace joolochu.Model
                     context.Villages.Add(new Village { Id = 1939, Name = " Токмок", RegionId = 7, DistrictId = 47 });
                     context.Villages.Add(new Village { Id = 1940, Name = " Кызыл-Токой", RegionId = 2, DistrictId = 11 });
                     context.Villages.Add(new Village { Id = 1941, Name = " Мин-Орук", RegionId = 1, DistrictId = 1 });
+                    context.SaveChanges();
+
+                    if (!context.Points.Any())
+                    {
+                        List<Village> village = context.Villages.ToList();
+                        List<District> districts = context.Districts.ToList();
+                        int i = 0;
+                        foreach (var temp in village)
+                        {
+                            context.Points.Add(new Point() { Id=i, VillageId = temp.Id});
+                        }
+                        foreach (var temp in districts)
+                        {
+                            context.Points.Add(new Point() { Id = i, DistrictId = temp.Id });
+                        }
+                    }
                     context.SaveChanges();
                 }
             }
