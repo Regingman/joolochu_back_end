@@ -9896,23 +9896,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\User\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\esept\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\programming\\project\\ProjectGit\\asp net\\joolochu\\joolochu.csproj",
+      "projectUniqueName": "C:\\Users\\esept\\Source\\Repos\\joolochu_back_end\\joolochu.csproj",
       "projectName": "joolochu",
-      "projectPath": "E:\\programming\\project\\ProjectGit\\asp net\\joolochu\\joolochu.csproj",
-      "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "E:\\programming\\project\\ProjectGit\\asp net\\joolochu\\obj\\",
+      "projectPath": "C:\\Users\\esept\\Source\\Repos\\joolochu_back_end\\joolochu.csproj",
+      "packagesPath": "C:\\Users\\esept\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\esept\\Source\\Repos\\joolochu_back_end\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\esept\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -10033,7 +10029,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
       }
     }
   }

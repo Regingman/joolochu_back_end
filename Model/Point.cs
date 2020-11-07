@@ -17,7 +17,5 @@ namespace joolochu.Model
         public Village Village { get; set; }
         public int? DistrictId { get; set; }
         public District District { get; set; }
-        public int? CityId { get; set; }
-        public City City { get; set; }
     }
 }

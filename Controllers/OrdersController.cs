@@ -24,14 +24,25 @@ namespace joolochu.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Order>>> GetOrders()
         {
-            return await _context.Orders.ToListAsync();
+            return await _context.Orders
+                .Include(e => e.Car)
+                .Include(e => e.Car.Mark)
+                .Include(e => e.Car.Mark.TypeCar)
+                .Include(e => e.Car.User)
+                .ToListAsync();
         }
 
         // GET: api/Orders/5
         [HttpGet("{id}")]
         public async Task<ActionResult<Order>> GetOrder(int id)
         {
-            var order = await _context.Orders.FindAsync(id);
+            var order = await _context.Orders
+                .Where(p => p.Id == id)
+                .Include(e => e.Car)
+                .Include(e => e.Car.Mark)
+                .Include(e => e.Car.Mark.TypeCar)
+                .Include(e => e.Car.User)
+                .FirstOrDefaultAsync();
 
             if (order == null)
             {
@@ -89,7 +100,13 @@ namespace joolochu.Controllers
         [HttpDelete("{id}")]
         public async Task<ActionResult<Order>> DeleteOrder(int id)
         {
-            var order = await _context.Orders.FindAsync(id);
+            var order = await _context.Orders
+                .Where(p => p.Id == id)
+                .Include(e => e.Car)
+                .Include(e => e.Car.Mark)
+                .Include(e => e.Car.Mark.TypeCar)
+                .Include(e => e.Car.User)
+                .FirstOrDefaultAsync();
             if (order == null)
             {
                 return NotFound();
@@ -102,9 +119,14 @@ namespace joolochu.Controllers
         }
 
         [HttpGet("{start}/{end}")]
-        public async Task<ActionResult<Order>> FindOrder(int start, int end)
+        public async Task<ActionResult<List<Order>>> FindOrder(int start, int end)
         {
-            var order = await _context.Orders.Where(e => e.StartPointId == start && e.EndPointId == end).ToListAsync() ?? null;
+            var order = await _context.Orders
+                .Include(e => e.Car)
+                .Include(e => e.Car.Mark)
+                .Include(e => e.Car.Mark.TypeCar)
+                .Include(e => e.Car.User)
+                .Where(e => e.StartPointId == start && e.EndPointId == end).ToListAsync() ?? null;
             if (order == null)
             {
                 return NotFound();

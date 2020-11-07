@@ -24,14 +24,17 @@ namespace joolochu.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Region>>> GetRegions()
         {
-            return await _context.Regions.ToListAsync();
+            return await _context.Regions.Include(p => p.Districts).ToListAsync();
         }
 
         // GET: api/Regions/5
         [HttpGet("{id}")]
         public async Task<ActionResult<Region>> GetRegion(int id)
         {
-            var region = await _context.Regions.FindAsync(id);
+            var region = await _context.Regions
+                .Where(p => p.Id == id)
+                .Include(p => p.Districts)
+                .FirstOrDefaultAsync();
 
             if (region == null)
             {
@@ -89,7 +92,11 @@ namespace joolochu.Controllers
         [HttpDelete("{id}")]
         public async Task<ActionResult<Region>> DeleteRegion(int id)
         {
-            var region = await _context.Regions.FindAsync(id);
+            var region = await _context.Regions
+                .Where(p => p.Id == id)
+                .Include(p => p.Districts)
+                .FirstOrDefaultAsync();
+
             if (region == null)
             {
                 return NotFound();

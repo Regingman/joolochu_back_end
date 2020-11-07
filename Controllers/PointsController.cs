@@ -24,14 +24,22 @@ namespace joolochu.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Point>>> GetPoints()
         {
-            return await _context.Points.ToListAsync();
+            return await _context.Points
+                .Include(p => p.District)
+                .Include(p => p.Village)
+                .ToListAsync();
         }
 
         // GET: api/Points/5
         [HttpGet("{id}")]
         public async Task<ActionResult<Point>> GetPoint(int id)
         {
-            var point = await _context.Points.FindAsync(id);
+            var point =  await _context.Points
+                .Where(p => p.Id == id)
+                .Include(p => p.District)
+                .Include(p => p.Village)
+                .FirstOrDefaultAsync();
+
 
             if (point == null)
             {

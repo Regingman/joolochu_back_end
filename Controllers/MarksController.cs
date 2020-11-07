@@ -24,14 +24,16 @@ namespace joolochu.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Mark>>> GetMarks()
         {
-            return await _context.Marks.ToListAsync();
+            return await _context.Marks
+                .Include(p => p.TypeCar)
+                .ToListAsync();
         }
 
         // GET: api/Marks/5
         [HttpGet("{id}")]
         public async Task<ActionResult<Mark>> GetMark(int id)
         {
-            var mark = await _context.Marks.FindAsync(id);
+            var mark = await _context.Marks.Where(p=>p.Id == id).Include(p => p.TypeCar).FirstOrDefaultAsync();
 
             if (mark == null)
             {
@@ -89,7 +91,8 @@ namespace joolochu.Controllers
         [HttpDelete("{id}")]
         public async Task<ActionResult<Mark>> DeleteMark(int id)
         {
-            var mark = await _context.Marks.FindAsync(id);
+            var mark = await _context.Marks.Where(p => p.Id == id).Include(p => p.TypeCar).FirstOrDefaultAsync();
+
             if (mark == null)
             {
                 return NotFound();

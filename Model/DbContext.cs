@@ -16,7 +16,6 @@ namespace joolochu.Model
         }
         #region DbSet
         public virtual DbSet<Car> Cars { get; set; }
-        public virtual DbSet<City> Cities{ get; set; }
         public virtual DbSet<District> Districts{ get; set; }
         public virtual DbSet<Mark> Marks{ get; set; }
         public virtual DbSet<Order> Orders{ get; set; }

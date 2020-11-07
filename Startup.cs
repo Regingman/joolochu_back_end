@@ -28,9 +28,9 @@ namespace joolochu
         public void ConfigureServices(IServiceCollection services)
         {
             var optionsBuilder = new DbContextOptionsBuilder<ApplicationDbContext>();
-            optionsBuilder.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"));
+            optionsBuilder.UseNpgsql(Configuration.GetConnectionString("DefaultConnection"));
             services.AddDbContext<ApplicationDbContext>(options =>
-                options.UseSqlServer(
+                options.UseNpgsql(
                 Configuration.GetConnectionString("DefaultConnection")));
             services.AddControllers(); 
             services.AddSwaggerGen();
@@ -38,7 +38,7 @@ namespace joolochu
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, ApplicationDbContext db)
         {
             if (env.IsDevelopment())
             {
@@ -58,10 +58,13 @@ namespace joolochu
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(
-    name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}/{idTwo?}");
+                name: "default",
+                pattern: "{controller=Home}/{action=Index}/{id?}/{idTwo?}");
                 endpoints.MapControllers();
             });
+
+            DataSeeder.SeedData(db);
+
         }
     }
 }

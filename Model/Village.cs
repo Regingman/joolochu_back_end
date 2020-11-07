@@ -14,7 +14,10 @@ namespace joolochu.Model
         [Key]
         public int Id { get; set; }
         public string Name { get; set; }
-        public int DistrictId { get; set; }
+
+        public int? RegionId { get; set; }
+        public Region Region { get; set; }
+        public int? DistrictId { get; set; }
         public District District { get; set; }
     }
 }

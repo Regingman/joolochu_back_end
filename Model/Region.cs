@@ -16,6 +16,5 @@ namespace joolochu.Model
         public string Name { get; set; }
 
         public ICollection<District> Districts { get; set; }
-        public ICollection<City> Cities{ get; set; }
     }
 }
