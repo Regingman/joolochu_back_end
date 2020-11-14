@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\esept\\Source\\Repos\\joolochu_back_end\\joolochu.csproj": {}
+    "C:\\Users\\esept\\source\\repos\\joolochu_back_end\\joolochu.csproj": {}
   },
   "projects": {
-    "C:\\Users\\esept\\Source\\Repos\\joolochu_back_end\\joolochu.csproj": {
+    "C:\\Users\\esept\\source\\repos\\joolochu_back_end\\joolochu.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\esept\\Source\\Repos\\joolochu_back_end\\joolochu.csproj",
+        "projectUniqueName": "C:\\Users\\esept\\source\\repos\\joolochu_back_end\\joolochu.csproj",
         "projectName": "joolochu",
-        "projectPath": "C:\\Users\\esept\\Source\\Repos\\joolochu_back_end\\joolochu.csproj",
+        "projectPath": "C:\\Users\\esept\\source\\repos\\joolochu_back_end\\joolochu.csproj",
         "packagesPath": "C:\\Users\\esept\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\esept\\Source\\Repos\\joolochu_back_end\\obj\\",
+        "outputPath": "C:\\Users\\esept\\source\\repos\\joolochu_back_end\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

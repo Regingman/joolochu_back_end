@@ -14,8 +14,7 @@ namespace joolochu.Model
         public static void SeedData(ApplicationDbContext context)
         {
 
-            try
-            {
+
 
                 if (!context.TypeCars.Any())
                 {
@@ -9585,10 +9584,10 @@ namespace joolochu.Model
                     context.Districts.Add(new District { Id = 38, Name = " Сокулукский район ", RegionId = 7 });
                     context.Districts.Add(new District { Id = 39, Name = " Чуйский район ", RegionId = 7 });
                     context.Districts.Add(new District { Id = 40, Name = " Ысык-Атинский район ", RegionId = 7 });
-                    context.Districts.Add(new District { Id = 41, Name = " Ленинский район ", RegionId = 8 });
-                    context.Districts.Add(new District { Id = 42, Name = " Октябрьский район ", RegionId = 8 });
-                    context.Districts.Add(new District { Id = 43, Name = " Первомайский район ", RegionId = 8 });
-                    context.Districts.Add(new District { Id = 44, Name = " Свердловский район ", RegionId = 8 });
+                    context.Districts.Add(new District { Id = 41, Name = " Ленинский район ", RegionId = 7 });
+                    context.Districts.Add(new District { Id = 42, Name = " Октябрьский район ", RegionId =7 });
+                    context.Districts.Add(new District { Id = 43, Name = " Первомайский район ", RegionId = 7 });
+                    context.Districts.Add(new District { Id = 44, Name = " Свердловский район ", RegionId = 7 });
                     context.Districts.Add(new District { Id = 45, Name = " Каракол район ", RegionId = 3 });
                     context.Districts.Add(new District { Id = 46, Name = " Балыкчы район ", RegionId = 3 });
                     context.Districts.Add(new District { Id = 47, Name = " Токмок район ", RegionId = 7 });
@@ -10141,12 +10140,12 @@ namespace joolochu.Model
                     context.Villages.Add(new Village { Id = 534, Name = " Бордунский айылы ", RegionId = 7, DistrictId = 35 });
                     context.Villages.Add(new Village { Id = 535, Name = " Каинды айылы ", RegionId = 7, DistrictId = 37 });
                     context.Villages.Add(new Village { Id = 536, Name = " Шопоков айылы ", RegionId = 7, DistrictId = 38 });
-                    context.Villages.Add(new Village { Id = 537, Name = " Чон-Арык айылы ", RegionId = 8, DistrictId = 41 });
-                    context.Villages.Add(new Village { Id = 538, Name = " Орто-Сай айылы ", RegionId = 8, DistrictId = 41 });
-                    context.Villages.Add(new Village { Id = 539, Name = " Керме-Тоо айылы ", RegionId = 9, DistrictId = null });
-                    context.Villages.Add(new Village { Id = 540, Name = " Арек айылы ", RegionId = 9, DistrictId = null });
-                    context.Villages.Add(new Village { Id = 541, Name = " Джапалак айылы ", RegionId = 9, DistrictId = null });
-                    context.Villages.Add(new Village { Id = 542, Name = " Кенеш айылы ", RegionId = 9, DistrictId = null });
+                    context.Villages.Add(new Village { Id = 537, Name = " Чон-Арык айылы ", RegionId = 7, DistrictId = 41 });
+                    context.Villages.Add(new Village { Id = 538, Name = " Орто-Сай айылы ", RegionId = 7, DistrictId = 41 });
+                    context.Villages.Add(new Village { Id = 539, Name = " Керме-Тоо айылы ", RegionId = 7, DistrictId = null });
+                    context.Villages.Add(new Village { Id = 540, Name = " Арек айылы ", RegionId = 7, DistrictId = null });
+                    context.Villages.Add(new Village { Id = 541, Name = " Джапалак айылы ", RegionId = 7, DistrictId = null });
+                    context.Villages.Add(new Village { Id = 542, Name = " Кенеш айылы ", RegionId = 7, DistrictId = null });
                     context.Villages.Add(new Village { Id = 543, Name = " Жанырык айылы ", RegionId = 1, DistrictId = 1 });
                     context.Villages.Add(new Village { Id = 544, Name = " Тунук-Суу айылы ", RegionId = 1, DistrictId = 1 });
                     context.Villages.Add(new Village { Id = 545, Name = " Кан айылы ", RegionId = 1, DistrictId = 1 });
@@ -11568,8 +11567,6 @@ namespace joolochu.Model
                     }
                     context.SaveChanges();
                 }
-            }
-            catch { }
         }
     }
     
