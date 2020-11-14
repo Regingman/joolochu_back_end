@@ -896,6 +896,7 @@ namespace joolochu.Model
                     context.TypeCars.Add(new TypeCar { Id = 875, Name = "Orion" });
                     context.TypeCars.Add(new TypeCar { Id = 876, Name = "Oshan" });
                     context.TypeCars.Add(new TypeCar { Id = 877, Name = "Oshkosh" });
+                    context.SaveChanges();
                     context.TypeCars.Add(new TypeCar { Id = 878, Name = "OSI" });
                     context.TypeCars.Add(new TypeCar { Id = 879, Name = "Otokar" });
                     context.TypeCars.Add(new TypeCar { Id = 880, Name = "Oullim" });
@@ -2023,6 +2024,7 @@ namespace joolochu.Model
                     context.Marks.Add(new Mark { Id = 753, Name = "TT", TypeCarId = 126 });
                     context.Marks.Add(new Mark { Id = 754, Name = "TT RS", TypeCarId = 126 });
                     context.Marks.Add(new Mark { Id = 755, Name = "TTS", TypeCarId = 126 });
+                    context.SaveChanges();
                     context.Marks.Add(new Mark { Id = 756, Name = "Typ A", TypeCarId = 126 });
                     context.Marks.Add(new Mark { Id = 757, Name = "Typ B", TypeCarId = 126 });
                     context.Marks.Add(new Mark { Id = 758, Name = "Typ C", TypeCarId = 126 });
@@ -2816,6 +2818,7 @@ namespace joolochu.Model
                     context.Marks.Add(new Mark { Id = 1546, Name = "City Express", TypeCarId = 290 });
                     context.Marks.Add(new Mark { Id = 1547, Name = "Classic", TypeCarId = 290 });
                     context.Marks.Add(new Mark { Id = 1548, Name = "Cobalt", TypeCarId = 290 });
+                    context.SaveChanges();
                     context.Marks.Add(new Mark { Id = 1549, Name = "Colorado", TypeCarId = 290 });
                     context.Marks.Add(new Mark { Id = 1550, Name = "Combo", TypeCarId = 290 });
                     context.Marks.Add(new Mark { Id = 1551, Name = "Corsa", TypeCarId = 290 });
@@ -4183,6 +4186,7 @@ namespace joolochu.Model
                     context.Marks.Add(new Mark { Id = 2913, Name = "H6 Coupe", TypeCarId = 560 });
                     context.Marks.Add(new Mark { Id = 2914, Name = "H7", TypeCarId = 560 });
                     context.Marks.Add(new Mark { Id = 2915, Name = "H8", TypeCarId = 560 });
+                    context.SaveChanges();
                     context.Marks.Add(new Mark { Id = 2916, Name = "H9", TypeCarId = 560 });
                     context.Marks.Add(new Mark { Id = 2917, Name = "M6", TypeCarId = 560 });
                     context.Marks.Add(new Mark { Id = 2918, Name = "B11", TypeCarId = 561 });
@@ -5916,6 +5920,7 @@ namespace joolochu.Model
                     context.Marks.Add(new Mark { Id = 4646, Name = "SW35", TypeCarId = 781 });
                     context.Marks.Add(new Mark { Id = 4647, Name = "SW38", TypeCarId = 781 });
                     context.Marks.Add(new Mark { Id = 4648, Name = "SW42", TypeCarId = 781 });
+                    context.SaveChanges();
                     context.Marks.Add(new Mark { Id = 4649, Name = "Typ 12", TypeCarId = 781 });
                     context.Marks.Add(new Mark { Id = 4650, Name = "W1", TypeCarId = 781 });
                     context.Marks.Add(new Mark { Id = 4651, Name = "W3", TypeCarId = 781 });
@@ -6784,6 +6789,7 @@ namespace joolochu.Model
                     context.Marks.Add(new Mark { Id = 5514, Name = "Toronado", TypeCarId = 866 });
                     context.Marks.Add(new Mark { Id = 5515, Name = "Vista Cruiser", TypeCarId = 866 });
                     context.Marks.Add(new Mark { Id = 5516, Name = "Adam", TypeCarId = 869 });
+                    context.SaveChanges();
                     context.Marks.Add(new Mark { Id = 5517, Name = "Admiral", TypeCarId = 869 });
                     context.Marks.Add(new Mark { Id = 5518, Name = "Agila", TypeCarId = 869 });
                     context.Marks.Add(new Mark { Id = 5519, Name = "Ampera", TypeCarId = 869 });
@@ -7688,6 +7694,7 @@ namespace joolochu.Model
                     context.Marks.Add(new Mark { Id = 6418, Name = "Himalayan", TypeCarId = 1001 });
                     context.Marks.Add(new Mark { Id = 6419, Name = "Junior Constructor", TypeCarId = 1001 });
                     context.Marks.Add(new Mark { Id = 6420, Name = "Mechanical Horse", TypeCarId = 1001 });
+                    context.SaveChanges();
                     context.Marks.Add(new Mark { Id = 6421, Name = "Mountaineer", TypeCarId = 1001 });
                     context.Marks.Add(new Mark { Id = 6422, Name = "Pioneer", TypeCarId = 1001 });
                     context.Marks.Add(new Mark { Id = 6423, Name = "Rigid", TypeCarId = 1001 });
@@ -7738,6 +7745,7 @@ namespace joolochu.Model
                     context.Marks.Add(new Mark { Id = 6468, Name = "Inca", TypeCarId = 1010 });
                     context.Marks.Add(new Mark { Id = 6469, Name = "Leon", TypeCarId = 1010 });
                     context.Marks.Add(new Mark { Id = 6470, Name = "Leon Cupra", TypeCarId = 1010 });
+                    context.SaveChanges();
                     context.Marks.Add(new Mark { Id = 6471, Name = "Malaga", TypeCarId = 1010 });
                     context.Marks.Add(new Mark { Id = 6472, Name = "Marbella", TypeCarId = 1010 });
                     context.Marks.Add(new Mark { Id = 6473, Name = "Mii", TypeCarId = 1010 });
@@ -9256,6 +9264,7 @@ namespace joolochu.Model
                     context.Marks.Add(new Mark { Id = 7986, Name = "GT3", TypeCarId = 1210 });
                     context.Marks.Add(new Mark { Id = 7987, Name = "E10", TypeCarId = 1211 });
                     context.Marks.Add(new Mark { Id = 7988, Name = "ST1", TypeCarId = 1212 });
+                    context.SaveChanges();
                     context.Marks.Add(new Mark { Id = 7989, Name = "D1", TypeCarId = 1213 });
                     context.Marks.Add(new Mark { Id = 7990, Name = "D2", TypeCarId = 1213 });
                     context.Marks.Add(new Mark { Id = 7991, Name = "D3", TypeCarId = 1213 });
@@ -9621,6 +9630,7 @@ namespace joolochu.Model
                     context.Villages.Add(new Village { Id = 21, Name = " Октябрьское айылы ", RegionId = 3, DistrictId = 12 });
                     context.Villages.Add(new Village { Id = 22, Name = " Джол-Колот айылы ", RegionId = 3, DistrictId = 12 });
                     context.Villages.Add(new Village { Id = 23, Name = " Отуз-Уул айылы ", RegionId = 3, DistrictId = 12 });
+                    context.SaveChanges();
                     context.Villages.Add(new Village { Id = 24, Name = " Уч-Кайнар айылы ", RegionId = 3, DistrictId = 12 });
                     context.Villages.Add(new Village { Id = 25, Name = " Отрадное айылы ", RegionId = 3, DistrictId = 12 });
                     context.Villages.Add(new Village { Id = 26, Name = " Орлиное айылы ", RegionId = 3, DistrictId = 12 });
@@ -10504,6 +10514,7 @@ namespace joolochu.Model
                     context.Villages.Add(new Village { Id = 907, Name = " Орукту-Сай айылы ", RegionId = 2, DistrictId = 5 });
                     context.Villages.Add(new Village { Id = 908, Name = " Чолок-Тума айылы ", RegionId = 2, DistrictId = 5 });
                     context.Villages.Add(new Village { Id = 909, Name = " Айры-Там айылы ", RegionId = 2, DistrictId = 5 });
+                    context.SaveChanges();
                     context.Villages.Add(new Village { Id = 910, Name = " Ак-Башат айылы ", RegionId = 2, DistrictId = 5 });
                     context.Villages.Add(new Village { Id = 911, Name = " Алма-Бель айылы ", RegionId = 2, DistrictId = 5 });
                     context.Villages.Add(new Village { Id = 912, Name = " Джаны-Шаар айылы ", RegionId = 2, DistrictId = 5 });
@@ -11203,6 +11214,7 @@ namespace joolochu.Model
                     context.Villages.Add(new Village { Id = 1607, Name = " Ак-Булак айылы ", RegionId = 5, DistrictId = 26 });
                     context.Villages.Add(new Village { Id = 1608, Name = " Учбай айылы ", RegionId = 5, DistrictId = 26 });
                     context.Villages.Add(new Village { Id = 1609, Name = " Айбек     айылы ", RegionId = 5, DistrictId = 26 });
+                    context.SaveChanges();
                     context.Villages.Add(new Village { Id = 1610, Name = " Ак-Чабуу айылы ", RegionId = 5, DistrictId = 26 });
                     context.Villages.Add(new Village { Id = 1611, Name = " Интернационал айылы ", RegionId = 5, DistrictId = 26 });
                     context.Villages.Add(new Village { Id = 1612, Name = " Караке айылы ", RegionId = 5, DistrictId = 26 });
@@ -11535,6 +11547,7 @@ namespace joolochu.Model
                     context.Villages.Add(new Village { Id = 1939, Name = " Токмок айылы ", RegionId = 7, DistrictId = 47 });
                     context.Villages.Add(new Village { Id = 1940, Name = " Кызыл-Токой айылы ", RegionId = 2, DistrictId = 11 });
                     context.Villages.Add(new Village { Id = 1941, Name = " Мин-Орук айылы ", RegionId = 1, DistrictId = 1 });
+                    context.SaveChanges();
                     context.Villages.Add(new Village { Id = 1942, Name = " г. Ош ", RegionId = 1, DistrictId = 1 });
                     context.Villages.Add(new Village { Id = 1943, Name = " г. Бишкек ", RegionId = 1, DistrictId = 1 });
                     context.SaveChanges();
