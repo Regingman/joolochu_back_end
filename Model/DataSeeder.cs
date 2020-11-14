@@ -9531,8 +9531,6 @@ namespace joolochu.Model
                     context.Regions.Add(new Region { Id = 5, Name = "Ошская область" });
                     context.Regions.Add(new Region { Id = 6, Name = "Таласская область" });
                     context.Regions.Add(new Region { Id = 7, Name = "Чуйская область" });
-                    context.Regions.Add(new Region { Id = 8, Name = "г.Бишкек" });
-                    context.Regions.Add(new Region { Id = 9, Name = "г.Ош" });
                     context.SaveChanges();
                 }
 
@@ -11537,6 +11535,8 @@ namespace joolochu.Model
                     context.Villages.Add(new Village { Id = 1939, Name = " Токмок айылы ", RegionId = 7, DistrictId = 47 });
                     context.Villages.Add(new Village { Id = 1940, Name = " Кызыл-Токой айылы ", RegionId = 2, DistrictId = 11 });
                     context.Villages.Add(new Village { Id = 1941, Name = " Мин-Орук айылы ", RegionId = 1, DistrictId = 1 });
+                    context.Villages.Add(new Village { Id = 1942, Name = " г. Ош ", RegionId = 1, DistrictId = 1 });
+                    context.Villages.Add(new Village { Id = 1943, Name = " г. Бишкек ", RegionId = 1, DistrictId = 1 });
                     context.SaveChanges();
 
                     if (!context.Points.Any())
