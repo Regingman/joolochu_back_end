@@ -2,7 +2,8 @@
   "runtimeOptions": {
     "additionalProbingPaths": [
       "C:\\Users\\esept\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\esept\\.nuget\\packages"
+      "C:\\Users\\esept\\.nuget\\packages",
+      "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
     ]
   }
 }

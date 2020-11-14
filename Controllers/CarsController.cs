@@ -6,6 +6,8 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using joolochu.Model;
+using System.IO;
+using Microsoft.AspNetCore.Hosting;
 
 namespace joolochu.Controllers
 {
@@ -13,11 +15,13 @@ namespace joolochu.Controllers
     [ApiController]
     public class CarsController : ControllerBase
     {
-        private readonly ApplicationDbContext _context;
-
-        public CarsController(ApplicationDbContext context)
+        ApplicationDbContext _context;
+        IWebHostEnvironment _appEnvironment;
+ 
+        public CarsController(ApplicationDbContext context, IWebHostEnvironment appEnvironment)
         {
             _context = context;
+            _appEnvironment = appEnvironment;
         }
 
         // GET: api/Cars
@@ -46,6 +50,60 @@ namespace joolochu.Controllers
             }
 
             return car;
+        }
+
+
+        //// GET: api/Cars/5
+        [HttpGet]
+        [Route("[action]/{id}")]
+        public async Task<ActionResult<FileResult>> GetCarImage(int id)
+        {
+            var car = await _context.Cars.FindAsync(id);
+
+            if (car == null)
+            {
+                return NotFound();
+            }
+
+            byte[] mas = System.IO.File.ReadAllBytes(car.ImagePath);
+            string file_type = "image/*";
+            string file_name = car.ImageName;
+            return File(mas, file_type, file_name);
+        }
+
+        //// GET: api/Cars/5
+        [HttpPost]
+        [Route("[action]")]
+        public async Task<ActionResult> PostCarImage(int id, IFormFile formFile)
+        {
+            var car = await _context.Cars.FindAsync(id);
+
+            if (car == null)
+            {
+                return NotFound();
+            }
+
+            if (formFile != null)
+            {
+                if (!Directory.Exists(_appEnvironment.WebRootPath + "/cars/" + car.UserId))
+                {
+                    Directory.CreateDirectory(_appEnvironment.WebRootPath + "/cars/" + car.UserId);
+                }
+
+                string path = "/cars/" + formFile.FileName;
+                using (var fileStream = new FileStream(_appEnvironment.WebRootPath + path, FileMode.Create))
+                {
+                    await formFile.CopyToAsync(fileStream);
+                }
+
+                car.ImageName = formFile.FileName;
+                car.ImagePath = _appEnvironment.WebRootPath + path;
+
+                _context.Update(car);
+                await _context.SaveChangesAsync();
+            }
+
+            return Ok();
         }
 
         // PUT: api/Cars/5

@@ -1,0 +1,35 @@
+
+// context.TypeCars.Add(new TypeCar { Id = 1, Name = "" });
+
+
+
+var b = Object.keys(a);
+
+var typecars = "";
+
+
+for (var i = 1; i < b.length; i++ ) { 
+
+	typecars += "context.TypeCars.Add(new TypeCar { Id = " + i + ", Name = \"" + b[i] + "\"}); "  + " \n";
+	
+
+};
+
+console.log(typecars);
+
+// context.Marks.Add(new Mark { Id = 1, Name = "", TypeCarId = 0 });
+ 
+var marks = "";
+
+var c = 0;
+
+for (var i = 1; i < b.length; i++ ) { 
+	
+	for (var j = 0; j < a[b[i]].length; j++) {
+		c++;	
+		marks += "context.Marks.Add(new Mark { Id = " + c + ", Name = \"" + a[b[i]][j] + "\", TypeCarId = " + i + " }); \n";
+	}
+
+};
+
+console.log(marks);
